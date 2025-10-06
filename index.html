@@ -1,86 +1,76 @@
 <!DOCTYPE html>
 <html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Letterhead</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <article>
+      <h1><span class="vh">Awesome Company</span></h1>
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width" />
-  <title>Letterhead</title>
-  <link rel="stylesheet" href="css/style.css" />
-</head>
+      <section class="letter-grid">
+        <nav class="mini-nav">
+          <a href="#">contact</a>
+          <a href="#">shipping</a>
+          <a href="#">jobs</a>
+          <a href="#">license</a>
+          <a href="#">sitemap</a>
+          <a href="#">help</a>
+        </nav>
 
-<body>
-  <article>
-    <h1><span class="vh">Awesome Company</span></h1>
-    <section class="letter-grid">
-      <nav class="mini-nav">
-        <a href="#">contact</a>
-        <a href="#">shipping</a>
-        <a href="#">jobs</a>
-        <a href="#">license</a>
-        <a href="#">sitemap</a>
-        <a href="#">help</a>
-      </nav>
+        <h2 class="page-title">Lorem Ipsum</h2>
+        <p class="tagline">“There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain.”</p>
 
-      <h2 class="page-title">Lorem Ipsum</h2>
-      <p class="tagline">“There is no one who loves pain itself, who seeks after it and wants to have it, simply because
-        it is pain.”</p>
+        <div class="content-grid">
+          <div class="col">
+            <h3>What is Lorem Ipsum?</h3>
+            <p><strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. It has been the industry’s standard dummy text since the 1500s when a printer scrambled a galley of type to make a specimen book.</p>
+            <p>It has survived five centuries and the leap to electronic typesetting, remaining essentially unchanged. It became popular in the 1960s with Letraset sheets and later desktop publishing software.</p>
 
-      <div class="content-grid">
-        <div class="col">
-          <h3>What is Lorem Ipsum?</h3>
-          <p><strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. It has been the
-            industry’s standard dummy text since the 1500s when a printer scrambled a galley of type to make a specimen
-            book.</p>
-          <p>It has survived five centuries and the leap to electronic typesetting, remaining essentially unchanged. It
-            became popular in the 1960s with Letraset sheets and later desktop publishing software.</p>
+            <h3>Where does it come from?</h3>
+            <p>Contrary to popular belief, Lorem Ipsum is not random text. It comes from sections 1.10.32 and 1.10.33 of “De Finibus Bonorum et Malorum” by Cicero (45 BC). Richard McClintock identified the source by tracing the word <em>consectetur</em> in classical literature.</p>
+          </div>
 
-          <h3>Where does it come from?</h3>
-          <p>Contrary to popular belief, Lorem Ipsum is not random text. It comes from sections 1.10.32 and 1.10.33 of
-            “De Finibus Bonorum et Malorum” by Cicero (45 BC). Richard McClintock identified the source by tracing the
-            word <em>consectetur</em> in classical literature.</p>
+          <div class="col">
+            <h3>Why do we use it?</h3>
+            <p>Using Lorem Ipsum produces natural-looking blocks of copy that don’t distract from layout and type choices. It mimics English letter distribution without conveying meaning, so you can judge spacing and rhythm.</p>
+            <p>Designers use it to prototype pages, test visual hierarchy, and compare weights before final content is ready.</p>
+
+            <!-- Required: radios + button -->
+            <form id="ipsumForm" class="panel">
+              <fieldset class="choices">
+                <label><input type="radio" name="mode" value="words"> words</label>
+                <label><input type="radio" name="mode" value="bytes"> bytes</label>
+                <label><input type="radio" name="mode" value="lists"> lists</label>
+              </fieldset>
+              <button type="button" id="goBtn">Generate Lorem Ipsum</button>
+            </form>
+
+            <h3>Where can I get some?</h3>
+            <p>Plenty of generators provide paragraphs, words, lists, or byte-sized chunks. Use any, then replace with final copy when it’s available.</p>
+          </div>
         </div>
+      </section>
+      <!-- ===== /Centered grid band ===== -->
 
-        <div class="col">
-          <h3>Why do we use it?</h3>
-          <p>Using Lorem Ipsum produces natural-looking blocks of copy that don’t distract from layout and type choices.
-            It mimics English letter distribution without conveying meaning, so you can judge spacing and rhythm.</p>
-          <p>Designers use it to prototype pages, test visual hierarchy, and compare weights before final content is
-            ready.</p>
-
-          <!-- small form block -->
-          <form id="ipsumForm" class="panel">
-            <fieldset class="choices">
-              <label><input type="radio" name="mode" value="words"> words</label>
-              <label><input type="radio" name="mode" value="bytes"> bytes</label>
-              <label><input type="radio" name="mode" value="lists"> lists</label>
-            </fieldset>
-            <button type="button" id="goBtn">Generate Lorem Ipsum</button>
-          </form>
-
-          <h3>Where can I get some?</h3>
-          <p>Plenty of generators provide paragraphs, words, lists, or byte-sized chunks. Use any, then replace with
-            final copy when it’s available.</p>
-        </div>
-      </div>
-    </section>
-
-    <address>
-      <p>The Awesome Company</p>
-      <p>102-112 Frail Bend Bridge<br>
+      <address>
+        <p>The Awesome Company</p>
+        <p>102-112 Frail Bend Bridge<br>
         The Dwindlings<br>
         Little Hornet<br>
         HX3 9ZQ<br>
         UK</p>
-    </address>
-  </article>
+      </address>
+    </article>
 
-  <script>
-    // Alert whichever radio is selected (or say none)
-    document.getElementById('goBtn').addEventListener('click', function () {
-      const picked = document.querySelector('input[name="mode"]:checked');
-      alert(picked ? picked.value : 'Nothing selected');
-    });
-  </script>
-</body>
-
+    <script>
+      // Alert whichever radio is selected (or say none)
+      document.getElementById('goBtn').addEventListener('click', function(){
+        const picked = document.querySelector('input[name="mode"]:checked');
+        alert(picked ? picked.value : 'Nothing selected');
+      });
+    </script>
+  </body>
 </html>
