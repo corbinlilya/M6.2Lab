@@ -19,10 +19,9 @@
           <a href="#">sitemap</a>
           <a href="#">help</a>
         </nav>
-
         <h2 class="page-title">Lorem Ipsum</h2>
         <p class="tagline">“There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain.”</p>
-
+        <hr class="divider">
         <div class="content-grid">
           <div class="col">
             <h3>What is Lorem Ipsum?</h3>
@@ -37,8 +36,6 @@
             <h3>Why do we use it?</h3>
             <p>Using Lorem Ipsum produces natural-looking blocks of copy that don’t distract from layout and type choices. It mimics English letter distribution without conveying meaning, so you can judge spacing and rhythm.</p>
             <p>Designers use it to prototype pages, test visual hierarchy, and compare weights before final content is ready.</p>
-
-            <!-- Required: radios + button -->
             <form id="ipsumForm" class="panel">
               <fieldset class="choices">
                 <label><input type="radio" name="mode" value="words"> words</label>
@@ -47,14 +44,11 @@
               </fieldset>
               <button type="button" id="goBtn">Generate Lorem Ipsum</button>
             </form>
-
             <h3>Where can I get some?</h3>
             <p>Plenty of generators provide paragraphs, words, lists, or byte-sized chunks. Use any, then replace with final copy when it’s available.</p>
           </div>
         </div>
       </section>
-      <!-- ===== /Centered grid band ===== -->
-
       <address>
         <p>The Awesome Company</p>
         <p>102-112 Frail Bend Bridge<br>
@@ -64,9 +58,7 @@
         UK</p>
       </address>
     </article>
-
     <script>
-      // Alert whichever radio is selected (or say none)
       document.getElementById('goBtn').addEventListener('click', function(){
         const picked = document.querySelector('input[name="mode"]:checked');
         alert(picked ? picked.value : 'Nothing selected');

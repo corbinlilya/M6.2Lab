@@ -62,3 +62,13 @@ export async function fetch5RandomJokes() {
         throw new Error(error.message);
     }
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  const btn = document.getElementById('goBtn');
+  if (!btn) return;
+
+  btn.addEventListener('click', () => {
+    const picked = document.querySelector('input[name="mode"]:checked');
+    alert(picked ? picked.value : 'Nothing selected');
+  });
+});
